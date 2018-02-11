@@ -3,11 +3,25 @@ package com.validation.beanValidation.model;
 import java.util.Date;
 import java.util.List;
 
+import javax.validation.Valid;
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class Venda {
 	
+	@NotNull
+	@Size(min = 1)
+	@Valid 
 	private List<ItemVenda> itens;
+	
+	@NotNull
 	private Date data;
+	
+	@DecimalMin("0")
 	private float total;
+	
+	@NotNull
 	private TipoVenda tipo;
 	
 	public Venda() {}

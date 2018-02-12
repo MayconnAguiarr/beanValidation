@@ -26,8 +26,8 @@ public class App {
 
 		Venda venda = new Venda();
 		venda.setData(Calendar.getInstance().getTime());
-		venda.setTipo(TipoVenda.VendaBrinde);
-		venda.setTotal(1);
+		venda.setTipo(TipoVenda.VendaPadrao);
+		venda.setTotal(0);
 		venda.setItens(new ArrayList<ItemVenda>() {
 			{
 				add(item);
